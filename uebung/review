@@ -2,6 +2,13 @@
 <html>
 <head>
 <style>
+ body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+
   header {
             background-color: red;
             color: white;
@@ -13,6 +20,22 @@
             text-decoration: none;
             margin: 0 1em;
         }
+  footer {
+            background-color: red;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+}
+  section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 1em;
+        }
+
 </style>
 <title> Review </title>
 </head>
@@ -29,6 +52,16 @@
 	<section>
 	<h2> Wie habe ich HTML gelernt!</h2>
     <img src="html.png">
+		<p>
+		Als eine Frau war für mich sehr schwierig diese Entscheidung zu treffen, 
+		aber ich wollte immer ein starker Mensch sein und war immer lernbereit.
+		</p>
+<p>
+letzendlich habe ich die Enscxheidung getroffen und habe mich für eine Ausbildung in diesem Bereich
+entschieden.<br>
+Der erste HTML-stund war relativ einfacher als das was ich mir immer vorgestellt hatte. Ich habe dann erkannt, dass
+ich unnötigt Angst hatte.
+</p>
 	</section>
 	<article>
 	
