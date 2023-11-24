@@ -2,41 +2,12 @@ div {background-color: pink;
     margin: 20px 5px;
   	padding: 10px;}
 
-.box {
-	background-color: red;
-}
-
-
-
-#neu {
-	background-color: blue;
-}
-
-#neu.box{
-	background-color: black;
-}
-
-
-div p {
-	
-}
-
-[href] {
-	color: red;
-}
-
-:hover {
-	background-color: black;
-}
-
-
-
-h1 {
-	font-family: "Bagel Fat One", "Times New Roman", sans-serif;
-}
-
-ul {
-	list-style-type: none;
-	color: red;
-	font-size: 20px;Z
-}
+.middle{  background-color: #f0f0f0;
+  padding: 10px;
+  border: 1px solid #ccc;
+       }
+#First{ font-size: 24px;
+	  color: blue;}
+div{ margin: 10px;
+  	border: 2px solid #ddd;
+  	padding: 20px;}
