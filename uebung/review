@@ -1,88 +1,43 @@
 <!DOCTYPE html>
-<html lang="de">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produkt Review</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background-color: #333;
+<style>
+  header {
+            background-color: red;
             color: white;
             padding: 1em;
             text-align: center;
-        }
-
-        nav {
-            background-color: #666;
-            padding: 0.5em;
-        }
-
-        nav a {
+}
+  nav a {
             color: white;
             text-decoration: none;
             margin: 0 1em;
         }
-
-        section {
-            max-width: 800px;
-            margin: 2em auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        section img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 4px;
-            margin-bottom: 1em;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1em 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+</style>
+<title> Review </title>
 </head>
 <body>
-    <header>
-        <h1>Produkt Review</h1>
-    </header>
-
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Über uns</a>
-        <a href="#">Kontakt</a>
-    </nav>
-
-    <section>
-        <h2>Das beste Produkt aller Zeiten</h2>
-        <img src="produktbild.jpg" alt="Produktbild">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget mauris ac purus ultrices
-            interdum eu at libero. Nunc aliquet posuere arcu, eget commodo justo facilisis ut.
-        </p>
-        <p>
-            Praesent cursus, libero ut lacinia faucibus, justo sem vehicula tortor, a pharetra felis
-            odio nec libero. Nullam at nisl eu ligula lobortis luctus.
-        </p>
-    </section>
-
-    <footer>
-        <p>© 2023 Produkt Review von Max Mustermann</p>
-    </footer>
+	<header>
+		<h1>Produkt Review</h1>
+        
+	</header>
+	<nav>
+		<a href="google.com">Home</a>
+        <a href="google.de">Home2</a>
+        <a href="google.ir">Home3</a>
+	</nav>
+	<section>
+	<h2> Wie habe ich HTML gelernt!</h2>
+    <img src="html.png">
+	</section>
+	<article>
+	
+	</article>
+	<aside>
+		
+	</aside>
+	<footer>
+	 <p> Hallo! Meine Name ist Sakina. Ich lerne grade HTML.</p>
+	</footer>
 </body>
 </html>
