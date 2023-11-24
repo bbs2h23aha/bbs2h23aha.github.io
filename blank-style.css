@@ -1,1 +1,28 @@
+/* blank-style.css */
 
+/* Styles for a class */
+.text-box {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+/* Styles for an ID */
+#First {
+  font-size: 24px;
+  color: blue;
+}
+
+/* Styles for a tag */
+div {
+  margin: 10px;
+  border: 2px solid #ddd;
+  padding: 20px;
+}
+
+/* Additional styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eaeaea;
+  color: #333;
+}
