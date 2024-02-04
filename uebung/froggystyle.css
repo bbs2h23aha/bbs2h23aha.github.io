@@ -4,6 +4,7 @@ body {
 		#pond {
 			height: 800px;
 			background-color: black;
+			flex-direction: column;
 		}
 		#frogs {
 			height: 800px;
