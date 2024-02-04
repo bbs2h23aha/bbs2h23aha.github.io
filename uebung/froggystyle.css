@@ -19,3 +19,4 @@ body {
 			height:120px;
 			margin:20px;
 		}
+		flex-direction: column-reverse;
