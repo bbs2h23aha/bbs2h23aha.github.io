@@ -7,42 +7,13 @@
     <link href="Responsive.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://biblehrer.github.io/Aufgaben/Style.css">
     <style>
-        /* Media Query für Bildschirme bis zu 768px Breite */
-        @media screen and (max-width: 768px) {
-            nav {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 10px;
-            }
+        /* Media Query für Bildschirme ab einer Breite von 768px */
+        @media screen and (min-width: 768px) {
             .menu-list {
                 display: none; /* Navigation ausblenden */
             }
-            .dog {
-                width: 50px; /* Größe des Hundelogos anpassen */
-            }
-            .main-flexbox {
-                flex-direction: column; /* Inhaltsboxen in Spalten anordnen */
-            }
-            .main-textbox,
-            .main-textbox:last-child {
-                order: 2; /* Reihenfolge der Textboxen ändern */
-                margin-top: 20px; /* Abstand zwischen den Textboxen hinzufügen */
-            }
-            .main-textbox p {
-                font-size: 14px; /* Textgröße anpassen */
-            }
-            .main-image {
-                width: 100%; /* Bildbreite auf 100% setzen */
-            }
-            .main-button {
-                margin-top: 20px; /* Abstand zwischen Text und Button hinzufügen */
-            }
-            .main-footer div {
-                text-align: center; /* Text in der Fußzeile zentrieren */
-            }
-            .main-footer .footer-text {
-                margin-right: 10px; /* Abstand zwischen den Fußzeilentexten erhöhen */
+            .hamburger-menu {
+                display: block; /* Hamburger-Menüsymbol anzeigen */
             }
         }
     </style>
@@ -51,15 +22,14 @@
 
 <nav>
     <img src="https://www.creativefabrica.com/wp-content/uploads/2022/05/11/1652275957/Cartoon-Corgi-Dog-Running-580x386.jpg" alt="Dog Logo" class="dog"/>
-    <div class="hamburger-menu">&#9776;</div> <!-- Hamburger-Menüsymbol für kleine Bildschirme -->
     <ul class="menu-list" id="home">
         <li><a href="google.com">Link 1</a></li>
         <li><a href="google">Link 2</a></li>
         <li><a href="google.com">Link 3</a></li>
         <li><a href="google.com">Link 4</a></li>
     </ul>
+    <div class="hamburger-menu">&#9776;</div> <!-- Hamburger-Menüsymbol für kleine Bildschirme -->
 </nav>
-
 <header>
     <h1>Better than "Lorem ipsum"</h1>
 </header>
