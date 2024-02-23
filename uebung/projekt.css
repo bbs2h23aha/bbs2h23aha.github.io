@@ -3,4 +3,20 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+.container{
+    height: 100vh;
+    whide: 100%;
+    background: linear-gradient((rgba:(0,0,0,0.7));((rgba:(0,0,0,0.7)),url(images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, Halvetica, sans-serif;
+}
+.nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 80px;
+}
+.nav-bar .title{
+    color: #fff;
+    font-size: 67px;
