@@ -20,3 +20,28 @@
 .nav-bar .title{
     color: #fff;
     font-size: 67px;
+    font-weight: 600;
+}
+span{
+    color: crimson;
+}
+.nav-bar p{
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 50px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+}
+.menu li{
+    list-style: none;
+    display: inline-block;
+}
+.menu li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 27px;
+    margin-left: 25px;
+}
+    
+
