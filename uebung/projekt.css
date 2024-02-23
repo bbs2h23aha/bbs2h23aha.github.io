@@ -41,7 +41,15 @@ span{
     text-decoration: none;
     color: #fff;
     font-size: 27px;
+    font-weight: 600;
     margin-left: 25px;
+    transition: .4s ease;
 }
+.menu li a:hover{
+    color: crimson;
+    padding: 8px 30px;
+    border: 2px solid #fff;
+    
+
     
 
