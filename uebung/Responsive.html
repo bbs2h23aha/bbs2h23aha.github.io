@@ -1,11 +1,145 @@
 <!Doctype html>
 <html lang="en">
 <head>
+	<style>
+		*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    height: 100%;
+}
+
+
+body {
+  height: 100%;
+    background-color: rgb(14,14,14);
+}
+nav{
+    min-height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(42,42,42);
+    color: white;
+}
+.nav_logo{
+    margin: 20px;
+    font-size: 30px;
+    font-family: sans-serif;
+    font-style: italic;
+}
+nav ul{
+    display: flex;
+}
+nav ul li{
+    height: 100%;
+    padding: 30px;
+    list-style-type: none;
+    border-bottom: 4px solid rgb(42,42,42)
+}
+nav ul li:hover{
+    border-bottom: 4px solid (111,0,255)
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-family: sans-serif;
+}
+.toggle-button{
+    position: absulute;
+    top: 25px;
+    right: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 23px;
+}
+.toggle-button .bar{
+    height: 4px;
+    width: 100%;
+    background-color: white;
+    border-radius: 100px;
+}
+@media(max-width:750px){
+    .list-container{
+        display: none;
+        width: 100%;
+    }
+    .toggle-button{
+        display: flex;
+    }
+    nav{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .list-container ul{
+        flex-direction: column;
+        width: 100%;
+    }
+    .list-container li{
+        text-align: center;
+    }
+}
+.menu-list {
+    float: right;
+}
+
+.menu-list li {
+    display: inline-block;
+    padding: 40px;
+    margin: 25px 30px;
+}
+
+.dog {
+    height: 150px;
+}
+
+header h1 {
+    margin: 100px 0;
+}
+
+.round-white-box {
+    margin-bottom: 80px; 
+}
+
+.main-flexbox {
+    display: flex;  
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-textbox {
+    width: 580px;
+    padding: 0 50px;
+    margin: 18px;  
+}
+
+.main-image {
+    height: 400px;
+    width: 1000px;
+    margin: 18px;  
+}
+
+.main-button {
+    display: inline-block;
+    padding: 11px 0px;
+    text-align: center;
+    width: 340px;
+    margin: 20px 0;
+}
+
+.main-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+	</style>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Comptible" content="IE=edge">
 	<title>Nothing said - many words</title>
-	<link href="Responsive.css" rel="stylesheet" type="text/css" />
-	<link rel="stylesheet" href="https://bbs2h23aha.github.io/Aufgaben/Style.css">
 </head>
 <body>
 
