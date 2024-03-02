@@ -547,15 +547,5 @@ form .form-content input:valid~span::before {
         flex-direction: column;
     }
 
-    /* content */
-
-    .content h2 {
-        font-size: 20px;
-    }
-
-    .content p {
-        font-size: 13px;
-    }
-
 
 
