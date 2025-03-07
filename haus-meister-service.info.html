@@ -8,39 +8,60 @@
 
 </head>
 
-
-
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emlak AG</title>
-    <link rel="stylesheet" href="style.css">
-</head>
 <body>
+    <form action="haus-meister-service.info.php" method="post">
 
     <!-- Header mit Hintergrundbild -->
     <div class="header-section">
         <div class="container">
             <!-- Formular (wird auf Mobile zuerst angezeigt) -->
             <div class="formular-container">
-                <h2>Hausmeisterdienste</h2>
-                <p><strong>Bitte ausfüllen:</strong></p>
+                <h2>Anfrageformular für Hausmeisterdienste</h2>
+                <p><strong>Bitte füllen Sie das Formular aus:</strong></p>
+                
                 <form>
-                    <label>Name:</label>
-                    <input type="text" name="name">
-                    <label>Vorname:</label>
-                    <input type="text" name="vorname">
-                    <label>E-Mail:</label>
-                    <input type="email" name="email">
-                    <label>Telefon:</label>
-                    <input type="tel" name="telefon">
-                    <label>Anmerkung:</label>
-                    <textarea name="anmerkung"></textarea>
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="email">E-Mail:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="telefon">Telefonnummer:</label>
+                        <input type="tel" id="telefon" name="telefon" required>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="adresse">Adresse des Objekts:</label>
+                        <input type="text" id="adresse" name="adresse" required>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="dienstleistung">Art der Dienstleistung:</label>
+                        <select id="dienstleistung" name="dienstleistung">
+                            <option value="reinigung">Reinigung</option>
+                            <option value="reparaturen">Reparaturen</option>
+                            <option value="gartenpflege">Gartenpflege</option>
+                            <option value="sonstiges">Sonstiges</option>
+                        </select>
+                    </div>
+            
+                    
+                    <div class="form-group">
+                        <label for="anliegen">Beschreibung des Anliegens:</label>
+                        <textarea id="anliegen" name="anliegen" rows="3"></textarea>
+                    </div>
+            
+                    
+                   
                     <button type="submit">Absenden</button>
                 </form>
             </div>
+            
         
             <!-- Infobox -->
             <div class="info-box">
@@ -142,3 +163,4 @@
 
 </body>
 </html>
+
