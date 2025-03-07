@@ -36,16 +36,15 @@ body {
 
 /* Linke Seite: Formular */
 .formular-container {
-    width: 450px;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(228, 223, 223, 0.8); /* Heller, transparenter Hintergrund */
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: left;
-    color: black;
+    width: 50%;
+    max-width: 500px;
 }
 
-/* Rechte Seite: Infobox */
 .info-box {
     width: 550px;
     background: rgba(0, 0, 0, 0.85);
@@ -77,27 +76,30 @@ input, textarea {
 }
 /* Labels und Eingabefelder */
 .form-group {
-    display: flex;
-    flex-direction: column;
     margin-bottom: 10px;
 }
+label {
+    font-weight: bold;
+    font-size: 14px;
+}
 
-input, textarea {
+input, select, textarea {
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
-    border-radius: 15px;
+    border-radius: 8px;
     font-size: 14px;
 }
 
 /* Button */
+/* Absende-Button */
 button {
     width: 100%;
     padding: 10px;
     background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 15px;
+    border-radius: 10px;
     cursor: pointer;
     font-size: 16px;
 }
