@@ -22,12 +22,16 @@ body {
 }
 
 /* Hauptcontainer für die beiden Boxen */
+/* Container für Formular & Infobox */
 .container {
     display: flex;
-    flex-direction: row; /* Infobox rechts, Formular links */
+    flex-direction: row; /* Standard: nebeneinander */
     align-items: flex-start;
-    gap: 100px; /* Abstand zwischen den Boxen */
-    margin-top: 150px; /* Mehr Abstand nach unten */
+    justify-content: center;
+    gap: 30px;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
 }
 
 /* Linke Seite: Formular */
@@ -50,7 +54,27 @@ body {
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+/* Infobox */
+.info-box, .formular-container {
+    width: 50%; /* Standard: 50% für beide */
+}
+/* Formular-Stil */
+.formular-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
 
+/* Sicherstellen, dass Formulareingaben auf mobile Geräte passen */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+}
 /* Labels und Eingabefelder */
 .form-group {
     display: flex;
@@ -286,24 +310,29 @@ h2 {
     background: #ddd;
 }
 
-/* ✅ MOBILE-FREUNDLICHKEIT: Anpassungen für kleine Bildschirme */
+/* Anpassung für mobile Geräte */
 @media (max-width: 768px) {
-    .section-box {
-        width: 90%;
-        padding: 30px;
+    .container {
+        flex-direction: column; /* Boxen untereinander statt nebeneinander */
+        align-items: center;
+        width: 95%;
+    }
+
+    .info-box, .formular-container {
+        width: 100%; /* Beide nehmen 100% der Breite ein */
+        max-width: 500px;
+    }
+
+    .formular-container {
+        order: -1; /* Formular zuerst anzeigen */
+    }
+
+    .info-box {
+        order: 2; /* Infobox darunter */
     }
 
     h2 {
-        font-size: 24px;
         text-align: center;
-    }
-
-    .section-box p, .section-box ul li {
-        font-size: 14px;
-    }
-
-    .separator {
-        width: 90%;
+        font-size: 22px;
     }
 }
-
