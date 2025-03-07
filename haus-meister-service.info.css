@@ -1,0 +1,309 @@
+/* Allgemeine Stile für die gesamte Seite */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Kein horizontaler Scroll */
+    color: white;
+}
+
+/* Hintergrundbild nur für den oberen Bereich */
+.header-section {
+    background-image: url('banner.jpg'); /* Dein Hintergrundbild */
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Volle Höhe für oberen Bereich */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative; /* Damit die Features sich darunter platzieren */
+}
+
+/* Hauptcontainer für die beiden Boxen */
+.container {
+    display: flex;
+    flex-direction: row; /* Infobox rechts, Formular links */
+    align-items: flex-start;
+    gap: 100px; /* Abstand zwischen den Boxen */
+    margin-top: 150px; /* Mehr Abstand nach unten */
+}
+
+/* Linke Seite: Formular */
+.formular-container {
+    width: 450px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    color: black;
+}
+
+/* Rechte Seite: Infobox */
+.info-box {
+    width: 550px;
+    background: rgba(0, 0, 0, 0.85);
+    color: rgb(229, 223, 223);
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Labels und Eingabefelder */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    font-size: 14px;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Hauptcontainer für den weißen Bereich unterhalb des Hintergrunds */
+.main-container {
+    background-color: white;
+    width: 100%;
+    padding-top: 50px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Weißer Bereich für die Features */
+.features-section-wrapper {
+    background-color: white; 
+    width: 100%;
+    padding: 80px 0; 
+    display: flex;
+    justify-content: center;
+}
+
+/* Container für die Icons */
+.features-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    width: 80%;
+}
+
+/* Einzelnes Feature mit Icon + Text */
+.feature {
+    text-align: center;
+    width: 220px;
+    color: black;
+}
+
+.feature img {
+    width: 80px;
+    height: 80px;
+}
+
+/* Allgemeine Stile */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    color: black;
+    background-color: #f8f9fa; /* Leicht grauer Hintergrund für den gesamten Body */
+}
+
+/* Überschriften */
+h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Allgemeine Box-Stile für Sektionen */
+.section-box {
+    width: 80%;
+    margin: 50px auto;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Erste Box: Einleitung */
+.section-intro {
+    background-color: #e3f2fd; /* Blau */
+    border-left: 5px solid #2196F3;
+}
+
+/* Zweite Box: Expertise */
+.section-expertise {
+    background-color: #f3e5f5; /* Lila */
+    border-left: 5px solid #9c27b0;
+}
+
+/* Dritte Box: Warum wir? */
+.section-why-us {
+    background-color: #fff3e0; /* Orange */
+    border-left: 5px solid #ff9800;
+}
+
+/* Vierte Box: Vorteile */
+.section-benefits {
+    background-color: #e8f5e9; /* Grün */
+    border-left: 5px solid #4caf50;
+}
+
+/* Letzte Box: Angebot anfordern */
+.section-offer {
+    background-color: #ffebee; /* Rot */
+    border-left: 5px solid #f44336;
+}
+
+/* Textabsätze */
+.section-box p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Listen */
+.section-box ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.section-box ul li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Angebot anfordern Box */
+.section-offer p {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Trennlinie */
+.separator {
+    width: 80%;
+    margin: 40px auto;
+    height: 2px;
+    background: #ddd;
+}
+/* Allgemeine Stile */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    color: black;
+    background-color: #f8f9fa; /* Leicht grauer Hintergrund für den gesamten Body */
+}
+
+/* Überschriften */
+h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Allgemeine Box-Stile für Sektionen */
+.section-box {
+    width: 80%;
+    margin: 50px auto;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Farben für verschiedene Bereiche */
+.section-intro { background-color: #e3f2fd; border-left: 5px solid #2196F3; }
+.section-expertise { background-color: #f3e5f5; border-left: 5px solid #9c27b0; }
+.section-why-us { background-color: #fff3e0; border-left: 5px solid #ff9800; }
+.section-benefits { background-color: #e8f5e9; border-left: 5px solid #4caf50; }
+.section-offer { background-color: #ffebee; border-left: 5px solid #f44336; }
+
+/* Textabsätze */
+.section-box p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Listen */
+.section-box ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.section-box ul li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Angebot anfordern Box */
+.section-offer p {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Trennlinie */
+.separator {
+    width: 80%;
+    margin: 40px auto;
+    height: 2px;
+    background: #ddd;
+}
+
+/* ✅ MOBILE-FREUNDLICHKEIT: Anpassungen für kleine Bildschirme */
+@media (max-width: 768px) {
+    .section-box {
+        width: 90%;
+        padding: 30px;
+    }
+
+    h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .section-box p, .section-box ul li {
+        font-size: 14px;
+    }
+
+    .separator {
+        width: 90%;
+    }
+}
+
