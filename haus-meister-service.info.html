@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Emlak AG</title>
@@ -8,56 +9,67 @@
   </head>
 
   <body>
-    <div class="header-section">
-      <div class="container">
-        <!-- Formular (wird auf Mobile zuerst angezeigt) -->
-        <div class="formular-container">
-          <h2>Anfrageformular für Hausmeisterdienste</h2>
-          <p><strong>Bitte füllen Sie das Formular aus:</strong></p>
-          <form action="http://localhost:3001/send-email" method="post">
-            <label>Name:</label>
-            <input type="text" name="name" required />
+    <!-- ✅ HEADER mit Logo & Navigation -->
+    <header class="header">
+      <div class="header-bg"></div> <!-- Hintergrundbild für den Header -->
+      <nav class="navbar">
+          <a href="#Anfrageformular">Anfrage</a>
+          <a href="#section-why-us">Warum Emlak AG?</a>
+          <a href="#how-it-works">Ablauf</a>
+          <a href="#kundenstimmen">Kundenstimmen</a>
+          <a href="#standort">Standort</a>
+      </nav>
+  </header>
+  
+  <div class="banner-section">
+    <div class="container">
+        <!-- Anfrageformular -->
+        <div id="Anfrageformular"class="formular-container fade-in">
+            <h2>Anfrageformular für Hausmeisterdienste</h2>
+            <p><strong>Bitte füllen Sie das Formular aus:</strong></p>
+            <form action="http://localhost:3001/send-email" method="post">
+                <label>Name:</label>
+                <input type="text" name="name" required />
 
-            <label>E-Mail:</label>
-            <input type="email" name="email" required />
+                <label>E-Mail:</label>
+                <input type="email" name="email" required />
 
-            <label>Telefonnummer:</label>
-            <input type="text" name="telefon" required />
+                <label>Telefonnummer:</label>
+                <input type="text" name="telefon" required />
 
-            <label>Adresse des Objekts:</label>
-            <input type="text" name="adresse" required />
+                <label>Adresse des Objekts:</label>
+                <input type="text" name="adresse" required />
 
-            <label>Art der Dienstleistung:</label>
-            <select name="dienstleistung" required>
-              <option value="Reinigung">Reinigung</option>
-              <option value="Reparaturen">Reparaturen</option>
-              <option value="Gartenpflege">Gartenpflege</option>
-              <option value="Sonstiges">Sonstiges</option>
-            </select>
+                <label>Art der Dienstleistung:</label>
+                <select name="dienstleistung" required>
+                    <option value="Reinigung">Reinigung</option>
+                    <option value="Reparaturen">Reparaturen</option>
+                    <option value="Gartenpflege">Gartenpflege</option>
+                    <option value="Sonstiges">Sonstiges</option>
+                </select>
 
-            <label>Beschreibung des Anliegens:</label>
-            <textarea name="anliegen" required></textarea>
+                <label>Beschreibung des Anliegens:</label>
+                <textarea name="anliegen" required></textarea>
 
-            <button type="submit">Absenden</button>
-          </form>
+                <button type="submit" class="button-animate">Absenden</button>
+            </form>
         </div>
 
         <!-- Infobox -->
-        <div class="info-box">
-          <h2>Unsere Immobilienbewertung</h2>
-          <ul>
-            <li>✔ 100% gratis für Eigentumsbesitzer</li>
-            <li>✔ Online, schnell & unverbindlich</li>
-            <li>✔ Ohne Registrierung</li>
-            <li>✔ Professionelle Wertermittlung</li>
-            <li>✔ Zum Höchstpreis verkaufen</li>
-          </ul>
+        <div class="info-box fade-in">
+            <h2>Unsere Immobilienbewertung</h2>
+            <ul>
+                <li>✔ 100% gratis für Eigentumsbesitzer</li>
+                <li>✔ Online, schnell & unverbindlich</li>
+                <li>✔ Ohne Registrierung</li>
+                <li>✔ Professionelle Wertermittlung</li>
+                <li>✔ Zum Höchstpreis verkaufen</li>
+            </ul>
         </div>
-      </div>
     </div>
-
-    <!-- Erweiterung der Webseite mit weißem Hintergrund -->
-    <div class="main-container">
+</div>
+     <!-- Erweiterung der Webseite mit weißem Hintergrund -->
+     <div class="main-container">
       <div class="features-section-wrapper">
         <div class="features-section">
           <div class="feature">
@@ -78,85 +90,145 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> 
 
-    <!-- Einleitung -->
-    <div class="section-box section-intro">
-      <h2>
-        Allround-Hausmeisterservice – Ihr zuverlässiger Partner für alle
-        Handwerksdienstleistungen!
-      </h2>
+
+    <div class="section-box section-intro fade-in">
+      <h2>Allround-Hausmeisterservice – Ihr zuverlässiger Partner für alle Handwerksdienstleistungen!</h2>
       <p>
-        Willkommen bei <strong>Emlak AG</strong>, Ihrem kompetenten
-        Allround-Anbieter für Hausmeisterdienste. Wir bieten Ihnen eine breite
-        Palette an Dienstleistungen – von Sanitär über Elektro bis zu Trockenbau
-        und Malerarbeiten. Unsere Mitarbeiter sind Fachleute aus verschiedenen
-        Handwerksbereichen und garantieren höchste Qualität aus einer Hand.
+        Willkommen bei <strong>Emlak AG</strong>, Ihrem kompetenten Allround-Anbieter für Hausmeisterdienste.
+        Wir bieten Ihnen eine breite Palette an Dienstleistungen – von Sanitär über Elektro bis zu Trockenbau
+        und Malerarbeiten. Unsere Mitarbeiter sind Fachleute aus verschiedenen Handwerksbereichen und garantieren
+        höchste Qualität aus einer Hand.
       </p>
     </div>
 
     <div class="separator"></div>
 
     <!-- Unsere Expertise -->
-    <div class="section-box section-expertise">
+    <div class="section-box section-expertise fade-in">
       <h2>Unsere Expertise</h2>
       <p>
-        Durch unser breites Handwerkernetzwerk sind wir in der Lage, Ihnen
-        maßgeschneiderte Angebote zu unterbreiten, die mit den Leistungen vieler
-        Mitbewerber nicht mithalten können. Unser Vorteil: Wir sparen für Sie
-        bis zu <strong>40%</strong>! Mit unserer bundesweiten Vernetzung und
-        einem kompetenten Team bieten wir Ihnen ein unschlagbares
-        Preis-Leistungs-Verhältnis.
+        Durch unser breites Handwerkernetzwerk sind wir in der Lage, Ihnen maßgeschneiderte Angebote zu unterbreiten,
+        die mit den Leistungen vieler Mitbewerber nicht mithalten können. Unser Vorteil: Wir sparen für Sie bis zu
+        <strong>40%</strong>! Mit unserer bundesweiten Vernetzung und einem kompetenten Team bieten wir Ihnen ein
+        unschlagbares Preis-Leistungs-Verhältnis.
       </p>
     </div>
 
     <div class="separator"></div>
 
     <!-- Warum wir? -->
-    <div class="section-box section-why-us">
+    <div id="section-why-us"class="section-box section-why-us fade-in">
       <h2>Warum wir?</h2>
       <p>
-        Unsere Kunden profitieren nicht nur von Qualität und Effizienz, sondern
-        auch von einem hohen Maß an Vertrauen. Wir handeln stets im Interesse
-        des Eigentümers und bieten Service, der keine Wünsche offen lässt. Mit
-        Vertrauen, Kompetenz und einem unschlagbaren Service gehen wir den extra
-        Schritt, um Ihre Zufriedenheit sicherzustellen.
+        Unsere Kunden profitieren nicht nur von Qualität und Effizienz, sondern auch von einem hohen Maß an Vertrauen.
+        Wir handeln stets im Interesse des Eigentümers und bieten Service, der keine Wünsche offen lässt. Mit Vertrauen,
+        Kompetenz und einem unschlagbaren Service gehen wir den extra Schritt, um Ihre Zufriedenheit sicherzustellen.
       </p>
     </div>
 
     <div class="separator"></div>
 
     <!-- Ihre Vorteile -->
-    <div class="section-box section-benefits">
+    <div class="section-box section-benefits fade-in">
       <h2>Ihre Vorteile</h2>
       <ul>
-        <li>
-          <strong>✔ Individuelle Angebote:</strong> Maßgeschneiderte Lösungen,
-          die perfekt auf Ihre Bedürfnisse abgestimmt sind.
-        </li>
-        <li>
-          <strong>✔ Kostenersparnis:</strong> Durch unsere direkten
-          Handwerkerkontakte bieten wir Ihnen Einsparungen von bis zu 40%.
-        </li>
-        <li>
-          <strong>✔ Kompetenz und Vertrauen:</strong> Wir sind Ihr Partner, auf
-          den Sie sich verlassen können.
-        </li>
+        <li><strong>✔ Individuelle Angebote:</strong> Maßgeschneiderte Lösungen, die perfekt auf Ihre Bedürfnisse abgestimmt sind.</li>
+        <li><strong>✔ Kostenersparnis:</strong> Durch unsere direkten Handwerkerkontakte bieten wir Ihnen Einsparungen von bis zu 40%.</li>
+        <li><strong>✔ Kompetenz und Vertrauen:</strong> Wir sind Ihr Partner, auf den Sie sich verlassen können.</li>
       </ul>
     </div>
 
     <div class="separator"></div>
 
     <!-- Jetzt Angebot anfordern -->
-    <div class="section-box section-offer">
+    <div class="section-box section-offer fade-in">
       <h2>Jetzt Angebot anfordern</h2>
       <p>
-        Füllen Sie unser einfaches Anfrageformular aus und erhalten Sie ein
-        unverbindliches und maßgeschneidertes Angebot – schnell, zuverlässig und
-        professionell!
+        Füllen Sie unser einfaches Anfrageformular aus und erhalten Sie ein unverbindliches und maßgeschneidertes Angebot – 
+        schnell, zuverlässig und professionell!
       </p>
     </div>
-    
+    <!-- ✅ ABLAUF -->
+    <section id="how-it-works" class="section-box section-expertise fade-in">
+      <h2>So funktioniert es</h2>
+      <div class="steps">
+          <div class="step">1️⃣ Anfrage senden</div>
+          <div class="step">2️⃣ Kostenlose Bewertung erhalten</div>
+          <div class="step">3️⃣ Beratung & Verkauf</div>
+      </div>
+  </section>
+
+  <!-- Kundenstimmen -->
+<section id="kundenstimmen" class="kundenstimmen">
+  <h2>Kundenstimmen</h2>
+  <div class="reviews-container">
+      <div class="review-box">
+          <p>"Sehr professionell!"</p>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+      </div>
+      <div class="review-box">
+          <p>"Schnelle Abwicklung!"</p>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+      </div>
+      <div class="review-box">
+          <p>"Tolle Beratung!"</p>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+      </div>
+  </div>
+</section>
+
+
+  <!-- ✅ GOOGLE MAPS STANDORT -->
+  <section id="standort" class="standort fade-in">
+      <h2>Unser Standort</h2>
+      <div class="map-container">
+          <iframe 
+              src="https://www.google.com/maps/embed?... (Hier die URL einfügen)"
+              width="100%" height="300" style="border:0;" allowfullscreen>
+          </iframe>
+      </div>
+  </section>
+
+  <!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+      <!-- Kontakt -->
+      <div class="footer-section">
+          <h3>Kontakt</h3>
+          <p>📍 Kaiserstr. 51, 51145 Köln</p>
+          <p>📞 Tel: +49 (0) 2203 / 90 98 50</p>
+          <p>📠 Fax: +49 (0) 2203 / 90 98 55</p>
+          <p>📧 E-Mail: <a href="mailto:info@emlak-ag.de">info@emlak-ag.de</a></p>
+      </div>
+
+      <!-- Öffnungszeiten -->
+      <div class="footer-section">
+          <h3>Öffnungszeiten</h3>
+          <p>🕒 Montag - Freitag: 10:00 - 18:00 Uhr</p>
+          <p>🕒 Samstag: 10:00 - 14:00 Uhr</p>
+          <p>🕒 Sonntag: Geschlossen</p>
+      </div>
+  </div>
+
+  <!-- Copyright & Links -->
+  <div class="footer-bottom">
+      <p>© 2024 Emlak AG – Vertrauen in Immobilien</p>
+      <p><a href="#">Impressum</a> | <a href="#">Datenschutz</a></p>
+  </div>
+</footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          document.querySelectorAll(".fade-in").forEach((element, index) => {
+              setTimeout(() => {
+                  element.style.opacity = "1";
+                  element.style.transform = "translateY(0)";
+              }, index * 200);
+          });
+      });
+    </script>
+
   </body>
-  
 </html>
