@@ -66,3 +66,39 @@ app.post("/send-email", async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server läuft auf Port ${PORT}`);
 });
+
+
+function toggleMenu() {
+  document.querySelector(".navbar").classList.toggle("active");
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const elements = document.querySelectorAll(".formular-container, .info-box, .section-box");
+  const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+          }
+      });
+  }, { threshold: 0.2 });
+
+  elements.forEach(element => observer.observe(element));
+
+
+  function toggleMenu() {
+    document.querySelector(".navbar").classList.toggle("open");
+}
+
+  // Google Maps einbinden
+  function initMap() {
+      var location = { lat: 50.9375, lng: 6.9603 }; // Köln
+      var map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 14,
+          center: location,
+      });
+      new google.maps.Marker({ position: location, map: map });
+  }
+
+  window.initMap = initMap;
+});
+
