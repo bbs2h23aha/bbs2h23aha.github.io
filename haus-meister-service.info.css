@@ -47,8 +47,8 @@ body {
 
 .info-box {
     width: 550px;
-    background: rgba(0, 0, 0, 0.85);
-    color: rgb(229, 223, 223);
+    background: rgba(247, 242, 242, 0.85);
+    color: rgb(32, 25, 25);
     padding: 50px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -311,6 +311,196 @@ h2 {
     height: 2px;
     background: #ddd;
 }
+/* ✅ Header mit Logo als Hintergrund */
+/* ✅ Header mit Logo */
+/* ✅ Fixierter Header mit Hintergrundbild */
+.header {
+    position: fixed;
+    width: 100%;
+    height: 120px; /* Höhe des Headers */
+    top: 0;
+    left: 0;
+    background-color: white; /* Falls das Bild nicht geladen wird */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ✅ Hintergrundbild für den Header */
+.header-bg {
+    background-image: url('logo.jpg'); /* Dein Logo als Hintergrund */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* ✅ Navigation unterhalb des Headers */
+.navbar {
+    position: absolute;
+    bottom: -50px; /* Direkt unter dem Header */
+    width: 100%;
+    background-color: white;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin: 0 15px;
+    transition: color 0.3s;
+    font-size: 16px;
+}
+
+.navbar a:hover {
+    color: #007bff;
+}
+
+/* ✅ Banner-Bild unter Header und Navigation */
+.banner-section {
+    background-image: url('banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh; /* Bannerhöhe */
+    margin-top: 170px; /* Damit das Banner unter Header & Nav bleibt */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+
+
+
+/* ✅ Kundenstimmen */
+.kundenstimmen {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f8f9fa;
+}
+
+.reviews-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 80%;
+    margin: auto;
+}
+
+.review-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ✅ Sterne-Icons */
+.stars {
+    color: gold;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* ✅ Mobile Optimierung */
+@media (max-width: 768px) {
+    .reviews-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/* 🌍 GOOGLE MAPS */
+.map-container {
+    width: 100%;
+    height: 300px;
+}
+
+/* ✅ Footer mit weißem Hintergrund */
+.footer {
+    background: #ffffff; /* Weißer Hintergrund */
+    color: black;
+    padding: 30px 0;
+    text-align: center;
+    border-top: 2px solid #ddd; /* Dünne graue Linie oben */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    max-width: 900px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    text-align: left;
+    max-width: 300px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* E-Mail-Adresse in einer Zeile mit "E-Mail:" anzeigen */
+.footer-section p a {
+    display: inline;  /* Inline statt Block */
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-section p a:hover {
+    text-decoration: underline;
+}
+
+
+/* ✅ Footer Bottom */
+.footer-bottom {
+    background: #f5f5f5; /* Leicht grauer Hintergrund */
+    padding: 15px;
+    font-size: 13px;
+}
+
+.footer-bottom a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+/* ✅ Mobile Anpassung */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-section {
+        margin-bottom: 20px;
+    }
+}
+
+
 
 /* Anpassung für mobile Geräte */
 @media (max-width: 768px) {
