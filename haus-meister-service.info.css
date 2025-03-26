@@ -778,3 +778,18 @@ body {
     padding: 20px;
   }
 }
+@media (max-width: 768px) {
+  .grid-section {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .grid-section .card,
+  .grid-section .card.full {
+    width: 100%;
+    grid-column: auto; /* überschreibt ggf. "full" */
+  }
+}
+
