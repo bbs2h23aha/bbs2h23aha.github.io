@@ -9,23 +9,23 @@
   </head>
 
   <body>
-    <!-- ✅ HEADER mit Logo & Navigation -->
-<!-- ✅ HEADER mit Logo & Navigation -->
-<header class="header">
-  <div class="header-bg"></div> <!-- Hintergrundbild für den Header -->
-  
-  <!-- ✅ Hamburger-Menü für Mobile -->
-  <div class="hamburger-menu" onclick="toggleMenu()">☰</div>
 
-  <!-- ✅ Navigation unterhalb des Headers -->
+<!-- 💠 HEADER mit Logo, Slogan und Navigation -->
+<header class="header-container">
+  <div class="logo-area">
+    <img src="logo.jpg" alt="Emlak AG Logo" />
+    <div class="logo-slogan">Vertrauen in Immobilien seit 2009</div>
+  </div>
   <nav class="navbar">
-      <a href="#Anfrageformular">Anfrage</a>
-      <a href="#section-why-us">Warum Emlak AG?</a>
-      <a href="#how-it-works">Ablauf</a>
-      <a href="#kundenstimmen">Kundenstimmen</a>
-      <a href="#standort">Standort</a>
+    <a href="#anfrage">Anfrage</a>
+    <a href="#warum">über uns</a>
+    <a href="#ablauf">Ablauf</a>
+    <a href="#Kundenstimmen">Kundenstimmen</a>
+    <a href="#standort">Standort</a>
+    <a class="header-cta" href="#anfrage">Jetzt anfragen</a>
   </nav>
 </header>
+
 
 
   
@@ -33,39 +33,42 @@
     <div class="container">
         <!-- Anfrageformular -->
         <div id="Anfrageformular"class="formular-container fade-in">
-            <h2>Anfrageformular für Hausmeisterdienste</h2>
-            <p><strong>Bitte füllen Sie das Formular aus:</strong></p>
+            <h2>Sichern Sie sich jetzt Ihre professionelle Hausmeisterbetreuung!</h2>
+            
             <form action="http://localhost:3001/send-email" method="post">
-                <label>Name:</label>
-                <input type="text" name="name" required />
+               
+                
+             
+              <input type="text" id="name" name="name" required placeholder="Ihr Name" />
+            
+              
+              <input type="email" id="email" name="email" required placeholder="Ihre E-Mail-Adresse" />
+            
+              
+              <input type="text" id="telefon" name="telefon" required placeholder="Ihre Telefonnummer" />
+            
+              
+              <input type="text" id="adresse" name="adresse" required placeholder="Adresse der Immobilie" />
+            
+             
+              <select name="dienstleistung" id="dienstleistung" required>
+                <option value="">Bitte wählen...</option>
+                <option value="Reinigung">Reinigung</option>
+                <option value="Reparaturen">Reparaturen</option>
+                <option value="Gartenpflege">Gartenpflege</option>
+                <option value="Sonstiges">Sonstiges</option>
+              </select>
+            
+            
+              <textarea id="anliegen" name="anliegen" required placeholder="Beschreiben Sie Ihr Anliegen kurz..."></textarea>
 
-                <label>E-Mail:</label>
-                <input type="email" name="email" required />
-
-                <label>Telefonnummer:</label>
-                <input type="text" name="telefon" required />
-
-                <label>Adresse des Objekts:</label>
-                <input type="text" name="adresse" required />
-
-                <label>Art der Dienstleistung:</label>
-                <select name="dienstleistung" required>
-                    <option value="Reinigung">Reinigung</option>
-                    <option value="Reparaturen">Reparaturen</option>
-                    <option value="Gartenpflege">Gartenpflege</option>
-                    <option value="Sonstiges">Sonstiges</option>
-                </select>
-
-                <label>Beschreibung des Anliegens:</label>
-                <textarea name="anliegen" required></textarea>
-
-                <button type="submit" class="button-animate">Absenden</button>
+                <button type="submit" class="button-animate">Kostenlos anfragen</button>
             </form>
         </div>
 
         <!-- Infobox -->
         <div class="info-box fade-in">
-            <h2>Unsere Immobilienbewertung</h2>
+            <h2>Unsere Hausmeisterservices</h2>
             <ul>
                 <li>✔ 100% gratis für Eigentumsbesitzer</li>
                 <li>✔ Online, schnell & unverbindlich</li>
@@ -77,6 +80,7 @@
     </div>
 </div>
      <!-- Erweiterung der Webseite mit weißem Hintergrund -->
+    
      <div class="main-container">
       <div class="features-section-wrapper">
         <div class="features-section">
@@ -99,105 +103,171 @@
         </div>
       </div>
     </div> 
-
-
-    <div class="section-box section-intro fade-in">
-      <h2>Allround-Hausmeisterservice – Ihr zuverlässiger Partner für alle Handwerksdienstleistungen!</h2>
-      <p>
-        Willkommen bei <strong>Emlak AG</strong>, Ihrem kompetenten Allround-Anbieter für Hausmeisterdienste.
-        Wir bieten Ihnen eine breite Palette an Dienstleistungen – von Sanitär über Elektro bis zu Trockenbau
-        und Malerarbeiten. Unsere Mitarbeiter sind Fachleute aus verschiedenen Handwerksbereichen und garantieren
-        höchste Qualität aus einer Hand.
-      </p>
-    </div>
-
-    <div class="separator"></div>
-
-    <!-- Unsere Expertise -->
-    <div class="section-box section-expertise fade-in">
-      <h2>Unsere Expertise</h2>
-      <p>
-        Durch unser breites Handwerkernetzwerk sind wir in der Lage, Ihnen maßgeschneiderte Angebote zu unterbreiten,
-        die mit den Leistungen vieler Mitbewerber nicht mithalten können. Unser Vorteil: Wir sparen für Sie bis zu
-        <strong>40%</strong>! Mit unserer bundesweiten Vernetzung und einem kompetenten Team bieten wir Ihnen ein
-        unschlagbares Preis-Leistungs-Verhältnis.
-      </p>
-    </div>
-
-    <div class="separator"></div>
-
-    <!-- Warum wir? -->
-    <div id="section-why-us"class="section-box section-why-us fade-in">
-      <h2>Warum wir?</h2>
-      <p>
-        Unsere Kunden profitieren nicht nur von Qualität und Effizienz, sondern auch von einem hohen Maß an Vertrauen.
-        Wir handeln stets im Interesse des Eigentümers und bieten Service, der keine Wünsche offen lässt. Mit Vertrauen,
-        Kompetenz und einem unschlagbaren Service gehen wir den extra Schritt, um Ihre Zufriedenheit sicherzustellen.
-      </p>
-    </div>
-
-    <div class="separator"></div>
-
-    <!-- Ihre Vorteile -->
-    <div class="section-box section-benefits fade-in">
-      <h2>Ihre Vorteile</h2>
-      <ul>
-        <li><strong>✔ Individuelle Angebote:</strong> Maßgeschneiderte Lösungen, die perfekt auf Ihre Bedürfnisse abgestimmt sind.</li>
-        <li><strong>✔ Kostenersparnis:</strong> Durch unsere direkten Handwerkerkontakte bieten wir Ihnen Einsparungen von bis zu 40%.</li>
-        <li><strong>✔ Kompetenz und Vertrauen:</strong> Wir sind Ihr Partner, auf den Sie sich verlassen können.</li>
-      </ul>
-    </div>
-
-    <div class="separator"></div>
-
-    <!-- Jetzt Angebot anfordern -->
-    <div class="section-box section-offer fade-in">
-      <h2>Jetzt Angebot anfordern</h2>
-      <p>
-        Füllen Sie unser einfaches Anfrageformular aus und erhalten Sie ein unverbindliches und maßgeschneidertes Angebot – 
-        schnell, zuverlässig und professionell!
-      </p>
-    </div>
-    <!-- ✅ ABLAUF -->
-    <section id="how-it-works" class="section-box section-expertise fade-in">
-      <h2>So funktioniert es</h2>
-      <div class="steps">
-          <div class="step">1️⃣ Anfrage senden</div>
-          <div class="step">2️⃣ Kostenlose Bewertung erhalten</div>
-          <div class="step">3️⃣ Beratung & Verkauf</div>
+    <section id="warum" class="ueber-emlak">
+      <div class="ueber-emlak-container">
+        <div class="ueber-text">
+          <h2>Mehr über die Emlak AG</h2>
+          <p>
+            Wir unterstützen Sie mit zuverlässigen Hausmeisterdiensten rund um Ihre Immobilie – von der Reinigung über Gartenpflege bis zu kleineren Reparaturen.
+            Unsere erfahrenen Fachkräfte sorgen für Ordnung, Sicherheit und Werterhalt – ganz nach Ihren Bedürfnissen.
+          </p>
+          <div class="zahlen">
+            <div>
+              <span>245</span>
+              <p>Vermietungen</p>
+            </div>
+            <div>
+              <span>200</span>
+              <p>Verkäufe</p>
+            </div>
+            <div>
+              <span>16</span>
+              <p>Bundesländer</p>
+            </div>
+          </div>
+        </div>
+        <div class="ansprechpartner-box">
+          <img src="chef.jpg" alt="Prof. Dr. h.c. Haksun Gülcücek">
+          <h3>Ansprechpartner</h3>
+          <p><strong>Prof. Dr. h.c. Haksun Gülcücek</strong><br>Kaiserstraße 51<br>51145 Köln</p>
+          <a href="#Anfrageformular" class="cta-btn">Kostenlose Beratung</a>
+          
+        </div>
       </div>
-  </section>
+    </section>
+    
 
-  <!-- Kundenstimmen -->
-<section id="kundenstimmen" class="kundenstimmen">
-  <h2>Kundenstimmen</h2>
-  <div class="reviews-container">
-      <div class="review-box">
-          <p>"Sehr professionell!"</p>
-          <div class="stars">⭐⭐⭐⭐⭐</div>
+    <section class="chef-section">
+      <div class="container-chef">
+        <!-- Video links -->
+        <div class="chef-video">
+          <iframe 
+            src="https://www.youtube.com/embed/mF0r8aVK_1M" 
+            title="Vorstellung Geschäftsführer Emlak AG"
+            frameborder="0" 
+            allowfullscreen>
+          </iframe>
+        </div>
+    
+        <!-- Text rechts -->
+        <div class="chef-info">
+          <h2>👨‍💼 Unser Geschäftsführer stellt sich vor</h2>
+          <p>
+            Lernen Sie den Menschen hinter <strong>Emlak AG</strong> kennen: Herr Prof. Dr. h.c. Haksun Gülcücek gibt in diesem kurzen Video persönliche Einblicke in seinen Werdegang, seine Motivation und warum Vertrauen in der Immobilienbranche so wichtig ist.
+          </p>
+          <p>
+            Authentisch, erfahren und engagiert – schauen Sie rein!
+          </p>
+          <a href="#Anfrageformular" class="cta-btn">Jetzt Anfrage starten</a>
+        </div>
       </div>
-      <div class="review-box">
-          <p>"Schnelle Abwicklung!"</p>
-          <div class="stars">⭐⭐⭐⭐⭐</div>
+    </section>
+    
+    
+    <section id="ablauf" class="grid-section">
+      <div class="card blue">
+        <h3>🔧 Ihr Rundum-Service</h3>
+        <p>Von Reparaturen über Reinigung bis Gartenpflege – unser <strong>Hausmeister-Komplettservice</strong> deckt alles ab, individuell für Ihre Immobilie.</p>
       </div>
-      <div class="review-box">
-          <p>"Tolle Beratung!"</p>
-          <div class="stars">⭐⭐⭐⭐⭐</div>
+    
+      <div class="card green">
+        <h3>✅ Unsere Leistungen</h3>
+        <ul>
+          <li>🔨 Kleinreparaturen & Wartung</li>
+          <li>🌳 Pflege von Grünanlagen</li>
+          <li>🧹 Reinigung & Winterdienst</li>
+          <li>🚚 Entrümpelung & Notdienste</li>
+        </ul>
       </div>
-  </div>
-</section>
+    
+      <div class="card blue">
+        <h3>🏆 Warum Emlak AG?</h3>
+        <ul>
+          <li>✅ Maßgeschneiderte Lösungen</li>
+          <li>✅ Experten aus Ihrer Region</li>
+          <li>✅ Bis zu 40% Kostenersparnis</li>
+        </ul>
+      </div>
+    
+      <div class="card green">
+        <h3>💡 Ihr Vorteil mit Emlak</h3>
+        <p>Faire Preise, schnelle Umsetzung und persönliche Beratung – vertrauen Sie auf <strong>verlässliche Immobilienbetreuung</strong>.</p>
+      </div>
+    
+      <div class="card purple full">
+        <h3>🚀 So funktioniert's</h3>
+        <ol>
+          <li>📝 Anfrage senden</li>
+          <li>📊 Kostenlose Bewertung erhalten</li>
+          <li>🤝 Beratung & Betreuung vor Ort</li>
+        </ol>
+      </div>
+    </section>
+    
 
+    <section id="Kundenstimmen" class="testimonial-section">
+      <h2>Das sagen unsere Kunden</h2>
+      <div class="testimonial-container">
+        
+        <div class="testimonial">
+          <div class="speech-bubble">
+            Nach langem Suchen haben wir endlich eine super Räumlichkeit für unser Büro gefunden!
+          </div>
+          <div class="user-info">
+            <img src="kunden1.jpg" alt="Christian Winkler">
+            <div>
+              <strong>CHRISTIAN WINKLER</strong><br>
+              <span>Altenstein Tourguides</span>
+            </div>
+          </div>
+        </div>
+    
+        <div class="testimonial">
+          <div class="speech-bubble">
+            Schnell und einfach den Kontakt aufgebaut – und schon hatten wir gefunden was wir wollten.
+          </div>
+          <div class="user-info">
+            <img src="kunden2.jpg" alt="Rainer Schmer">
+            <div>
+              <strong>RAINER SCHMER</strong><br>
+              <span>Sanitär & Co.</span>
+            </div>
+          </div>
+        </div>
+    
+        <div class="testimonial">
+          <div class="speech-bubble">
+            <em>Ohne die Emlak AG wäre unser Arbeitsumfeld wahrscheinlich immer noch unerträglich.</em>
+          </div>
+          <div class="user-info">
+            <img src="kunden3.jpg" alt="Dennis Schweighöfer">
+            <div>
+              <strong>DENNIS SCHWEIGHÖFER</strong><br>
+              <span>Benzen Verlag</span>
+            </div>
+          </div>
+        </div>
+    
+      </div>
+    </section>
+    
+    
 
-  <!-- ✅ GOOGLE MAPS STANDORT -->
-  <section id="standort" class="standort fade-in">
+    <section id="standort">
       <h2>Unser Standort</h2>
       <div class="map-container">
-          <iframe 
-              src="https://www.google.com/maps/embed?... (Hier die URL einfügen)"
-              width="100%" height="300" style="border:0;" allowfullscreen>
-          </iframe>
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2519.2575944814186!2d7.004659176924309!3d50.93530287167086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bf25cd982b60ff%3A0x3e1ab293e054b1e7!2sKaiserstra%C3%9Fe%2051%2C%2051145%20K%C3%B6ln!5e0!3m2!1sde!2sde!4v1711376720001!5m2!1sde!2sde"
+          width="100%"
+          height="450"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
-  </section>
+    </section>
+    
 
   <!-- Footer -->
 <footer class="footer">
