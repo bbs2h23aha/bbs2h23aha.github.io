@@ -10,6 +10,10 @@ body {
 
 /* Hintergrundbild nur für den oberen Bereich */
 .header-section {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+  url('banner.jpg') center/cover no-repeat;
+color: white;
+padding: 80px 10%;
     background-image: url('banner.jpg'); /* Dein Hintergrundbild */
     background-size: cover;
     background-position: center;
@@ -20,6 +24,27 @@ body {
     width: 100%;
     position: relative; /* Damit die Features sich darunter platzieren */
 }
+.banner {
+  background-image: url('banner.jpg');
+  background-size: cover;
+  background-position: center;
+  height: auto; /* <--- das ist wichtig */
+  padding: 100px 20px; /* optional, gibt oben/unten Abstand */
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 0;
+}
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+
 
 /* Hauptcontainer für die beiden Boxen */
 /* Container für Formular & Infobox */
@@ -372,7 +397,7 @@ body {
   }
   .grid-section {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-template-columns: 1fr;
     gap: 25px;
     padding: 50px;
     background-color: #f9f9f9;
@@ -505,18 +530,14 @@ body {
 
 /* ✅ Banner-Bild unter Header und Navigation */
 .banner-section {
-    background-image: url('banner.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 80vh; /* Bannerhöhe */
-    margin-top: 0px; /* Damit das Banner unter Header & Nav bleibt */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    position: relative;
+  background-image: url('banner.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0; /* Abstand oben und unten */
+  margin-top: 0px;
+  width: 100%;
+  position: relative;
 }
-
 
 
 
@@ -751,5 +772,9 @@ body {
   h2 {
     text-align: center;
     font-size: 22px;
+  }
+  .grid-section {
+    grid-template-columns: 1fr;
+    padding: 20px;
   }
 }
