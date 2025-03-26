@@ -27,12 +27,20 @@ body {
     display: flex;
     flex-direction: row; /* Standard: nebeneinander */
     align-items: flex-start;
-    justify-content: center;
+    justify-content: space-between;
     gap: 30px;
     width: 90%;
     max-width: 1200px;
     margin: auto;
+    
+
 }
+form input,
+form select,
+form textarea {
+  margin-bottom: 8px; /* 👈 erhöht den Abstand nach unten */
+}
+
 
 /* Linke Seite: Formular */
 .formular-container {
@@ -43,15 +51,18 @@ body {
     text-align: left;
     width: 50%;
     max-width: 500px;
+    border: 2px solid red;
 }
 
 .info-box {
-    width: 550px;
-    background: rgba(247, 242, 242, 0.85);
+    width: 400px;
+    background: rgba(255, 255, 255, 0.85);
     color: rgb(32, 25, 25);
     padding: 50px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    order: 1;
+    border: 2px solid red;
 }
 /* Infobox */
 .info-box, .formular-container {
@@ -64,6 +75,7 @@ body {
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: left;
+    order: 2;
 }
 
 /* Sicherstellen, dass Formulareingaben auf mobile Geräte passen */
@@ -149,6 +161,152 @@ button:hover {
     width: 80px;
     height: 80px;
 }
+.ueber-emlak {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('hausmeister-hintergrund.jpg') center/cover no-repeat;
+  color: white;
+  padding: 80px 10%;
+}
+
+.ueber-emlak-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.ueber-text {
+  flex: 1 1 55%;
+}
+
+.ueber-text h2 {
+  font-size: 2.8em;
+  margin-bottom: 20px;
+}
+
+.ueber-text p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.zahlen {
+  display: flex;
+  gap: 50px;
+  margin-top: 20px;
+}
+
+.zahlen div {
+  text-align: center;
+}
+
+.zahlen span {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #c81d1d;
+}
+
+.ansprechpartner-box {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  flex: 1 1 35%;
+}
+
+.ansprechpartner-box img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid white;
+}
+
+.ansprechpartner-box h3 {
+  margin: 10px 0 5px;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.ansprechpartner-box p {
+  font-size: 1em;
+  color: white;
+  line-height: 1.6;
+}
+
+.cta-btn {
+  display: inline-block;
+  margin-top: 15px;
+  background-color: #e60000;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+
+
+
+.chef-section {
+    background-color: #f7f7f7;
+    padding: 60px 20px;
+  }
+  
+  .container-chef {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+    align-items: center;
+  }
+  
+  .chef-video {
+    flex: 1 1 500px;
+    min-width: 300px;
+  }
+  
+  .chef-video iframe {
+    width: 100%;
+    height: 315px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .chef-info {
+    flex: 1 1 400px;
+  }
+  
+  .chef-info h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+  
+  .chef-info p {
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  
+  .cta-btn {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #e30613;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  .cta-btn:hover {
+    background-color: #bb000f;
+  }
+  
 
 /* Allgemeine Stile */
 body {
@@ -160,251 +318,190 @@ body {
     color: black;
     background-color: #f8f9fa; /* Leicht grauer Hintergrund für den gesamten Body */
 }
-
-/* Überschriften */
-h2 {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-/* Allgemeine Box-Stile für Sektionen */
-.section-box {
-    width: 80%;
-    margin: 50px auto;
-    padding: 40px;
+/* ✅ Struktur & Layout */
+.landing-section {
+    padding: 50px 5%;
+    background: #f9f9f9;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+  
+  .content-column {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+  }
+  
+  /* ✅ Box-Design */
+  .feature-box {
+    background: white;
+    border-left: 5px solid #007bff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 25px 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Erste Box: Einleitung */
-.section-intro {
-    background-color: #e3f2fd; /* Blau */
-    border-left: 5px solid #2196F3;
-}
-
-/* Zweite Box: Expertise */
-.section-expertise {
-    background-color: #f3e5f5; /* Lila */
-    border-left: 5px solid #9c27b0;
-}
-
-/* Dritte Box: Warum wir? */
-.section-why-us {
-    background-color: #fff3e0; /* Orange */
-    border-left: 5px solid #ff9800;
-}
-
-/* Vierte Box: Vorteile */
-.section-benefits {
-    background-color: #e8f5e9; /* Grün */
-    border-left: 5px solid #4caf50;
-}
-
-/* Letzte Box: Angebot anfordern */
-.section-offer {
-    background-color: #ffebee; /* Rot */
-    border-left: 5px solid #f44336;
-}
-
-/* Textabsätze */
-.section-box p {
+    margin-bottom: 30px;
+  }
+  
+  .feature-box.secondary {
+    border-color: #28a745;
+  }
+  
+  /* ✅ Typografie */
+  .feature-box h2 {
+    margin-top: 0;
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  .feature-box p, .feature-box li {
     font-size: 16px;
     line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-/* Listen */
-.section-box ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.section-box ul li {
-    margin-bottom: 10px;
-    padding: 10px;
+  }
+  
+  .icon-list, .steps {
+    padding-left: 20px;
+  }
+  
+  .icon-list li, .steps li {
+    margin-bottom: 8px;
+  }
+  .grid-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 25px;
+    padding: 50px;
+    background-color: #f9f9f9;
+  }
+  
+  .card {
     background: white;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Angebot anfordern Box */
-.section-offer p {
-    font-weight: bold;
-    font-size: 18px;
-    text-align: center;
-}
-
-/* Trennlinie */
-.separator {
-    width: 80%;
-    margin: 40px auto;
-    height: 2px;
-    background: #ddd;
-}
-/* Allgemeine Stile */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    overflow-x: hidden;
-    color: black;
-    background-color: #f8f9fa; /* Leicht grauer Hintergrund für den gesamten Body */
-}
-
-/* Überschriften */
-h2 {
-    font-size: 28px;
-    font-weight: bold;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card h3 {
+    font-size: 1.3rem;
     margin-bottom: 15px;
-}
-
-/* Allgemeine Box-Stile für Sektionen */
-.section-box {
-    width: 80%;
-    margin: 50px auto;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Farben für verschiedene Bereiche */
-.section-intro { background-color: #e3f2fd; border-left: 5px solid #2196F3; }
-.section-expertise { background-color: #f3e5f5; border-left: 5px solid #9c27b0; }
-.section-why-us { background-color: #fff3e0; border-left: 5px solid #ff9800; }
-.section-benefits { background-color: #e8f5e9; border-left: 5px solid #4caf50; }
-.section-offer { background-color: #ffebee; border-left: 5px solid #f44336; }
-
-/* Textabsätze */
-.section-box p {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-/* Listen */
-.section-box ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.section-box ul li {
+  }
+  
+  .card ul, .card ol {
+    padding-left: 20px;
+  }
+  
+  .card ul li, .card ol li {
     margin-bottom: 10px;
-    padding: 10px;
+  }
+  
+  .full {
+    grid-column: span 2;
+  }
+  
+  .blue {
+    border-left: 5px solid #007bff;
+  }
+  
+  .green {
+    border-left: 5px solid #28a745;
+  }
+  
+  .purple {
+    border-left: 5px solid #6f42c1;
+  }
+  
+
+
+
+
+
+
+
+  /* 💠 Header Container */
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
     background: white;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Angebot anfordern Box */
-.section-offer p {
-    font-weight: bold;
-    font-size: 18px;
-    text-align: center;
-}
-
-/* Trennlinie */
-.separator {
-    width: 80%;
-    margin: 40px auto;
-    height: 2px;
-    background: #ddd;
-}
-/* ✅ Header mit Logo als Hintergrund */
-/* ✅ Header mit Logo */
-/* ✅ Fixierter Header mit Hintergrundbild */
-.header {
-    position: fixed;
-    width: 100%;
-    height: 120px; /* Höhe des Headers */
-    top: 0;
-    left: 0;
-    background-color: white; /* Falls das Bild nicht geladen wird */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    flex-wrap: wrap;
+  }
+  .logo-area {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-/* ✅ Hintergrundbild für den Header */
-.header-bg {
-    background-image: url('logo.jpg'); /* Dein Logo als Hintergrund */
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-    height: 100%;
-}
-
-/* ✅ Navigation unterhalb des Headers */
-.navbar {
-    position: absolute;
-    bottom: -50px; /* Direkt unter dem Header */
-    width: 100%;
-    background-color: white;
-    padding: 10px 0;
-    text-align: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    z-index: 999;
-}
-
-.navbar a {
+    align-items: flex-start;
+  }
+  .logo-area img {
+    height: 50px;
+    margin-bottom: 5px;
+  }
+  .logo-slogan {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* 💠 Navigation */
+  .navbar {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .navbar a {
     text-decoration: none;
     color: black;
     font-weight: bold;
-    margin: 0 15px;
-    transition: color 0.3s;
-    font-size: 16px;
-}
-
-.navbar a:hover {
-    color: #007bff;
-}
-
-/* ✅ Standardmäßig Hamburger-Icon ausblenden */
-.hamburger-menu {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    z-index: 1001;
-}
-
-/* ✅ Menü nur auf mobilen Geräten sichtbar machen */
-@media (max-width: 768px) {
-    .hamburger-menu {
-        display: block; /* Nur auf Handy anzeigen */
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: 0.3s;
+  }
+  .navbar a:hover {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  /* 💠 CTA Button */
+  .header-cta {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  .header-cta:hover {
+    background-color: #0056b3;
+  }
+  
+  /* 💠 Responsive */
+  @media (max-width: 768px) {
+    .topbar { display: none; }
+    .header-container {
+      flex-direction: column;
+      align-items: flex-start;
     }
-
     .navbar {
-        display: none; /* Navigation standardmäßig versteckt */
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        right: 0;
-        width: 100%;
-        background: white;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-        padding: 10px 0;
-        text-align: center;
+      flex-direction: column;
+      width: 100%;
+      padding-top: 10px;
     }
-
     .navbar a {
-        display: block;
-        padding: 10px;
-        font-size: 18px;
+      padding: 10px 0;
+      width: 100%;
+      text-align: left;
     }
-
-    .navbar.open {
-        display: flex; /* Zeigt das Menü an, wenn auf Hamburger-Icon geklickt wird */
-    }
-}
-
+  }
+  
 
 /* ✅ Banner-Bild unter Header und Navigation */
 .banner-section {
@@ -412,7 +509,7 @@ h2 {
     background-size: cover;
     background-position: center;
     height: 80vh; /* Bannerhöhe */
-    margin-top: 170px; /* Damit das Banner unter Header & Nav bleibt */
+    margin-top: 0px; /* Damit das Banner unter Header & Nav bleibt */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -423,54 +520,136 @@ h2 {
 
 
 
-/* ✅ Kundenstimmen */
-.kundenstimmen {
+.reviews-section {
+    padding: 60px 30px;
+    background-color: #f9f9f9;
     text-align: center;
-    padding: 50px 0;
-    background-color: #f8f9fa;
-}
-
-.reviews-container {
+  }
+  
+  .reviews-section h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  
+  .review-grid {
     display: flex;
     justify-content: center;
-    gap: 20px;
     flex-wrap: wrap;
-    max-width: 80%;
-    margin: auto;
-}
-
-.review-box {
+    gap: 25px;
+  }
+  
+  .review-card {
     background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    max-width: 300px;
+    transition: transform 0.3s ease;
+  }
+  
+  .review-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .review-card .quote {
+    font-style: italic;
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+    line-height: 1.5;
+  }
+  
+  .stars {
+    color: gold;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .reviewer {
+    font-size: 0.95rem;
+    color: #555;
+  }
+  .testimonial-section {
+    padding: 60px 20px;
+    background: #fff;
     text-align: center;
-    width: 300px;
+  }
+  
+  .testimonial-section h2 {
+    color: red;
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+  }
+  
+  .testimonial-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  .testimonial {
+    max-width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  
+  .speech-bubble {
+    background: #f9f9f9;
+    border-radius: 20px;
+    padding: 20px;
+    position: relative;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  
+  .speech-bubble::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 12px;
+    border-style: solid;
+    border-color: #f9f9f9 transparent transparent transparent;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .user-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .user-info strong {
+    display: block;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+  }
+  
+  .user-info span {
+    font-size: 0.8rem;
+    color: #777;
+  }
+    
+
+#standort {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
 }
 
-/* ✅ Sterne-Icons */
-.stars {
-    color: gold;
-    font-size: 20px;
-    margin-top: 10px;
-}
-
-/* ✅ Mobile Optimierung */
-@media (max-width: 768px) {
-    .reviews-container {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-
-/* 🌍 GOOGLE MAPS */
-.map-container {
-    width: 100%;
-    height: 300px;
+#standort h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
 }
 
 /* ✅ Footer mit weißem Hintergrund */
@@ -546,27 +725,31 @@ h2 {
 
 /* Anpassung für mobile Geräte */
 @media (max-width: 768px) {
-    .container {
-        flex-direction: column; /* Boxen untereinander statt nebeneinander */
-        align-items: center;
-        width: 95%;
-    }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+  }
 
-    .info-box, .formular-container {
-        width: 100%; /* Beide nehmen 100% der Breite ein */
-        max-width: 500px;
-    }
+  .info-box, .formular-container {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    visibility: visible;
+  }
 
-    .formular-container {
-        order: -1; /* Formular zuerst anzeigen */
-    }
+  .formular-container {
+    order: -1; /* Formular zuerst */
+  }
 
-    .info-box {
-        order: 2; /* Infobox darunter */
-    }
+  .info-box {
+    order: 2; /* Dann Infobox */
+  }
 
-    h2 {
-        text-align: center;
-        font-size: 22px;
-    }
+  h2 {
+    text-align: center;
+    font-size: 22px;
+  }
 }
