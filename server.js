@@ -60,6 +60,26 @@ app.post("/send-email", async (req, res) => {
     res.status(500).json({ error: `Fehler beim Senden der E-Mail: ${error.message}` });
   }
 });
+app.post("/api/generate-text", async (req, res) => {
+  const prompt = req.body.prompt;
+
+  if (!prompt) {
+    return res.status(400).json({ error: "Kein Prompt angegeben." });
+  }
+
+  try {
+    const completion = await openai.chat.completions.create({
+      model: "gpt-4", // oder gpt-3.5-turbo (günstiger)
+      messages: [{ role: "user", content: prompt }],
+    });
+
+    res.json({ reply: completion.choices[0].message.content });
+  } catch (error) {
+    console.error("OpenAI Fehler:", error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
 
 
 // Starte den Server
@@ -101,4 +121,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.initMap = initMap;
 });
+const { OpenAI } = require("openai");
 
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY
+});
