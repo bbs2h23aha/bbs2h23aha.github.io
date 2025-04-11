@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navigation Bar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f4;
+    }
+
+    nav {
+      width: 100%;
+      height: 80px;
+      background-color: #111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    nav .row {
+      width: 90%;
+      max-width: 1200px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo p {
+      font-size: 22px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li {
+      list-style: none;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffcc00;
+    }
+
+    .toggle {
+      font-size: 24px;
+      color: white;
+      display: none;
+      cursor: pointer;
+    }
+
+    @media only screen and (max-width: 768px) {
+      .toggle {
+        display: block;
+      }
+
+      nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        background-color: #222;
+        height: calc(100vh - 80px);
+        padding-top: 30px;
+        transition: left 0.3s ease;
+      }
+
+      nav ul.active {
+        left: 0;
+      }
+    }
+
+    .toggle.active .fa-bars {
+      display: none;
+    }
+
+    .toggle.active .fa-xmark {
+      display: inline;
+    }
+
+    .toggle .fa-xmark {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="row">
+      <div class="logo">
+        <p>Navbar</p>
+      </div>
+
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+
+      <div class="toggle" onclick="burgermenu()">
+        <i class="fas fa-bars"></i>
+        <i class="fas fa-xmark"></i>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    function burgermenu() {
+      const ul = document.querySelector('nav ul');
+      const toggle = document.querySelector('.toggle');
+      ul.classList.toggle('active');
+      toggle.classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>
