@@ -16,17 +16,25 @@
     <img src="logo.jpg" alt="Emlak AG Logo" />
     <div class="logo-slogan">Vertrauen in Immobilien seit 2009</div>
   </div>
-  <nav class="navbar">
+
+  <!-- Hamburger Icon -->
+  <div class="menu-icon" onclick="toggleMenu()">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
     <a href="#anfrage">Anfrage</a>
-    <a href="#warum">über uns</a>
+    <a href="#warum">Über uns</a>
     <a href="#ablauf">Ablauf</a>
     <a href="#Kundenstimmen">Kundenstimmen</a>
     <a href="#standort">Standort</a>
     <a class="header-cta" href="#anfrage">Jetzt anfragen</a>
   </nav>
+  
 </header>
-
-
 
   
   <div class="banner-section">
@@ -339,6 +347,26 @@
 
 
     </script>
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById("navbar");
+    const icon = document.querySelector(".menu-icon");
+    nav.classList.toggle("active");
+    icon.classList.toggle("active");
+  }
+</script>
 
+
+<!-- ✅ Dann Chatbase laden -->
+<script>
+  window.chatbaseConfig = {
+    chatbotId: "tijZ21NXGi-Skrp0Y2hx9"
+  };
+</script>
+<script
+  src="https://www.chatbase.co/embed.min.js"
+  id="chatbase-script"
+  defer>
+</script>
   </body>
 </html>
